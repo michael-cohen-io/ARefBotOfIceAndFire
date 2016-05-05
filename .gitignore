@@ -1,3 +1,13 @@
 # .gitignore
 tokens.py
+tokens.pyc
 settings.py
+settings.pyc
+log.txt
+test.py
+test.pyc
+bot_controller.pyc
+book_data.pyc
+character_data.pyc
+house_data.pyc
+server_file_one_time.pyc
