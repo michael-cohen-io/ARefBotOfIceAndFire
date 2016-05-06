@@ -3,7 +3,7 @@ import anapioficeandfire
 class CharacterResponse:
 
     def __init__(self, raw_text):
-        self.query = raw_text.replace('ARefBotOfIceAndFire! Characters ', '', 1)
+        self.query = raw_text.replace('ARefBotOfIceAndFire! Character ', '', 1)
         self.api = anapioficeandfire.API()
 
     def get_relative(self, url):
@@ -96,6 +96,7 @@ class CharacterResponse:
     def create_response(self):
         response = ''
         characters = self.api.get_characters(name=self.query)
+        print('Length: ' + str(len(characters)))
         for c in characters:
             response += self.get_character(c)
             response += '\n***\n'
